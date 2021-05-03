@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 1</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="contenedor">
+        <form action="">
+            <input id="numero1" type="text">
+            <p>+</p>
+            <input id="numero2" type="text">
+            <p>=</p>
+            <input id="resultado" type="text" readonly>
+            <input id="par || impar" type="text">
+            <input type="button" class="btn" onclick="sumar()" value="RESULTADO">
+
+        </form>
+    </div>
+    <script>
+        function sumar(numero1,numero2)
+        {
+            var num1 = parseFloat(document.getElementById('numero1').value);
+            var num2 = parseFloat(document.getElementById('numero2').value);
+            var P = ("ES PAR");
+            var I = ("ES IMPAR");
+            var res1 = num1 + num2;
+            document.getElementById('resultado').value = res1;
+            if(res1%2===0)
+            {
+                document.getElementById('par || impar').value = P;
+            }else{
+                document.getElementById('par || impar').value = I;
+            }
+        }
+    </script>
+</body>
+</html>
